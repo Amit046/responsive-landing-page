@@ -1,0 +1,323 @@
+/* General Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, p {
+    margin: 0;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 20px;
+    color: white;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #007BFF;
+}
+
+.cta-btn {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Hero Section Styles */
+.hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    height: 500px;
+    text-align: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.hero .cta-btn {
+    background-color: #28a745;
+    padding: 15px 30px;
+    font-size: 18px;
+}
+
+.hero .cta-btn:hover {
+    background-color: #218838;
+}
+
+/* Features Section Styles (Using CSS Grid) */
+.features {
+    padding: 60px 40px;
+    text-align: center;
+    background-color: #f8f9fa;
+}
+
+.features h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #333;
+    grid-column: 1 / -1;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.feature-item {
+    background-color: white;
+    padding: 30px 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+}
+
+.feature-item h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.feature-item p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Testimonials Section Styles (Using Flexbox) */
+.testimonials {
+    padding: 60px 40px;
+    background-color: #f9f9f9;
+}
+
+.testimonials h2 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #333;
+    width: 100%;
+}
+
+.testimonials {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.testimonial {
+    flex: 1;
+    min-width: 300px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #555;
+    font-style: italic;
+}
+
+.testimonial cite {
+    font-size: 16px;
+    color: #007BFF;
+    font-weight: bold;
+}
+
+/* Footer Section Styles */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+footer p {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #007BFF;
+}
+
+/* Media Queries for Responsive Design */
+
+/* Mobile Screens (max-width: 767px) */
+@media (max-width: 767px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    
+    nav ul li {
+        margin-right: 0;
+    }
+    
+    .hero {
+        height: 400px;
+        padding: 0 20px;
+    }
+    
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+    
+    .hero .cta-btn {
+        padding: 12px 25px;
+        font-size: 16px;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+        padding: 40px 20px;
+    }
+    
+    .features h2 {
+        font-size: 28px;
+    }
+
+    .testimonials {
+        flex-direction: column;
+        padding: 40px 20px;
+    }
+    
+    .testimonials h2 {
+        font-size: 28px;
+    }
+    
+    .testimonial {
+        min-width: auto;
+    }
+    
+    footer {
+        padding: 20px;
+    }
+}
+
+/* Tablet Screens (min-width: 768px and max-width: 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .hero h1 {
+        font-size: 40px;
+    }
+    
+    .hero p {
+        font-size: 20px;
+    }
+    
+    .features {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 50px 30px;
+    }
+    
+    .features h2 {
+        font-size: 32px;
+    }
+
+    .testimonials {
+        flex-direction: row;
+        padding: 50px 30px;
+    }
+    
+    .testimonials h2 {
+        font-size: 32px;
+    }
+}
+
+/* Desktop Screens (min-width: 1025px) */
+@media (min-width: 1025px) {
+    .features {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 60px 40px;
+    }
+
+    .testimonials {
+        flex-direction: row;
+        padding: 60px 40px;
+    }
+    
+    .hero {
+        height: 600px;
+    }
+    
+    .hero h1 {
+        font-size: 56px;
+    }
+    
+    .hero p {
+        font-size: 26px;
+    }
+}
